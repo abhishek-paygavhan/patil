@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+     - name: do not permit traffic in default zone on port 8081/tcp
+       ansible.posix.firewalld:
+         port: 8081/tcp
+         permanent: true
+         state: disabled
