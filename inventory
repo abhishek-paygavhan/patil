@@ -1,1 +1,9 @@
 10.74.252.202
+
+[webserver]
+web1
+web2
+
+[database]
+db1
+db2
