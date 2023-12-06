@@ -2,10 +2,9 @@
 - name: Do not permit traffic in the default zone on port 8081/tcp
   hosts: all
   tasks:
-    - name: Disable port 8081/tcp in firewalld
-      ansible.posix.firewalld:
-        port: 8081/tcp  # Corrected port number
-        permanent: true
-        state: disabled
-
+    - name: Allow apache to modify files in /srv/git_repos
+      community.general.sefcontext:
+        target: '/var/lib/awx/test/abhi(/.*)?'
+        setype: httpd_sys_rw_content_t
+        state: present
 
