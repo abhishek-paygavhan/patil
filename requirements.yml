@@ -1,3 +1,4 @@
 ---
 collections:
-
+  - ansible.posix
+    src: https://192.168.122.233/api/galaxy/content/rh-certified/
