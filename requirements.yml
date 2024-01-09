@@ -1,4 +1,4 @@
 ---
 collections:
-  - ansible.posix
+  - name: ansible.posix
     source: https://192.168.122.233/api/galaxy/content/rh-certified/
